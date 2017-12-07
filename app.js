@@ -69,55 +69,55 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
                 alert('Well, only a couple more.');
                 console.log(answerTired, endUser,'isn\'t ready to quit');
             }
-//question six I grabbed this from davidbau.com it works way too well to mes with it.
-        var x = Math.floor(Math.random() * 30) + 1;
-        var turns = 5;
-        var hint = 'Can you guess my number, 1-30!';
-        while (turns > 0) {
-        var guess = prompt(hint +
-          ' You have ' + turns + ' guesses left.');
-          if (!guess) break;
-          guess = Number(guess);
-          if (guess == x) {
-          alert('YOU WIN!');
-          turns = 0;
-          } else {
-          if (guess < x) hint += ' Too small!';
-          if (guess > x) hint += ' Too big!';
-          turns = turns - 1;
-          console.log (endUser+'s guess was' + guess)
-          }
-          }
-          alert('The secret number was ' + x + '.');
-
-
-
+//question six I grabbed this from davidbau.com and a couple of other sites - stillneeds work
+  var x = Math.floor(Math.random() * 30) + 1;
+  var turns = 5;
+  var hint = 'Can you guess my number, 1-30!';
+    //console.log (endUser+'s guess was' + guess)
+  while (turns > 0) {
+    var guess = prompt(hint +
+      ' You have ' + turns + ' guesses left.');
+      if (!guess) break;
+      guess = Number(guess);
+      if (guess == x) {
+        alert('YOU WIN!');
+        turns = 0;
+      } else {
+        if (guess < x) hint += ' Too small!';
+        if (guess > x) hint += ' Too big!';
+        turns = turns - 1;
+        console.log (endUser+'s guess was' + guess)
+      }
+    }
+    alert('The secret number was ' + x + '.');
 
 
 //question seven its buggy but sort of works
-      var statesLived = ['arizona', 'nevada', 'california'];
-      var stateAnswer = prompt('Can you guess a state that I have lived in besides Washington?');
-      var flag;
-      for (var i = 0; i < statesLived.length; i++) {
-        console.log('each iteration:', statesLived[i]);
-
-
-        // making it work here
-        if (stateAnswer === statesLived[i]) {
-          alert('alright!  thats one!');
-          flag = true;
-          }
-      }
-
-      if (!flag) {
-        alert('Sorry - I haven\'t lived there.');
-      }
       var stateCount = 6;
-      while (stateCount > 0) {
-      var stateTry = prompt(' try again, you have 6 trys');
-      console.log ('number of wrong answers'+ statesLived);
-      stateCount = stateCount - 1
-      if (stateCount < 0){break;}
+      var statesLived = ['Arizona', 'Nevada', 'California'];
+      while (stateCount > 0){
+        var stateAnswer = prompt('Can you guess a state that I have lived in besides Washington?');
+        stateCount--;}
+        console.log(stateAnswer)
+
+        for (var i = 0; i < statesLived.length; i++) {
+        if (stateAnswer === statesLived[i]){
+          alert('Nice, you got one!');
+        stateCount = -1;
+        //alert('Nice, you got one!');
+        console.log(stateAnswer)
+        break;
+          }
+        }
+        if(stateCount > 0){
+          alert('Sorry, wrong answer. You have ' + stateCount + ' trys left.');
+          console.log(stateAnswer)
+        }
+        if (stateCount === 0) {
+          alert('Sorry, you are out of guesses. My previous homes were Arizona, Nevada, and California.');
+          console.log(stateAnswer)
+        }
 
 
-         }
+
+        /////
