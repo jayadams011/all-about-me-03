@@ -69,45 +69,55 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
                 alert('Well, only a couple more.');
                 console.log(answerTired, endUser,'isn\'t ready to quit');
             }
-//question six
-var number;
-var counter = 1;
+//question six I grabbed this from davidbau.com it works way too well to mes with it.
+        var x = Math.floor(Math.random() * 30) + 1;
+        var turns = 5;
+        var hint = 'Can you guess my number, 1-30!';
+        while (turns > 0) {
+        var guess = prompt(hint +
+          ' You have ' + turns + ' guesses left.');
+          if (!guess) break;
+          guess = Number(guess);
+          if (guess == x) {
+          alert('YOU WIN!');
+          turns = 0;
+          } else {
+          if (guess < x) hint += ' Too small!';
+          if (guess > x) hint += ' Too big!';
+          turns = turns - 1;
+          console.log (endUser+'s guess was' + guess)
+          }
+          }
+          alert('The secret number was ' + x + '.');
 
-while (number !== 20) {
-  number = parseInt(prompt('what is your fav number?'));
 
-  if (number < 20) {
-    alert('sorry you guessed too low');
-    counter++;
-  } else if (number > 20) {
-    alert('sorry you guessed too high');
-    counter++;
-  } else if (number === NaN || number === null) {
-    alert('please enter a number');
-    counter++;
-  }
-}
 
-console.log('counter:', counter);
 
-//question seven
-          var statesLived = ['Arizona', 'Nevada', 'California'];
-var answer = prompt('Can you guess a state that I have lived in besides Washington?');
-//if (statesLived){
-  //  statesLived = statesLived.toLowerCase();
-//}
-var flag;
 
-for (var i = 0; i < statesLived.length; i++) {
-  console.log('each iteration:', statesLived[i]);
-  // making it work here
-  if (answer === statesLived[i]) {
-    alert('nice job!  you got one!');
-    flag = true;
-    break;
-  }
-}
+//question seven its buggy but sort of works
+      var statesLived = ['arizona', 'nevada', 'california'];
+      var stateAnswer = prompt('Can you guess a state that I have lived in besides Washington?');
+      var flag;
+      for (var i = 0; i < statesLived.length; i++) {
+        console.log('each iteration:', statesLived[i]);
 
-if (!flag) {
-  alert('Sorry - I haven\'t lived there.');
-}
+
+        // making it work here
+        if (stateAnswer === statesLived[i]) {
+          alert('alright!  thats one!');
+          flag = true;
+          }
+      }
+
+      if (!flag) {
+        alert('Sorry - I haven\'t lived there.');
+      }
+      var stateCount = 6;
+      while (stateCount > 0) {
+      var stateTry = prompt(' try again, you have 6 trys');
+      console.log ('number of wrong answers'+ statesLived);
+      stateCount = stateCount - 1
+      if (stateCount < 0){break;}
+
+
+         }
