@@ -1,6 +1,11 @@
 ' use strict';
+
 var endUser = prompt ('Hi, What is your name?');
       console.log('The endUsers name is', endUser);
+
+
+
+function blah(){
 
 var answerCook = prompt(endUser +' '+'Do you like to cook: yes or no?');
   if (answerCook){
@@ -14,6 +19,11 @@ var answerCook = prompt(endUser +' '+'Do you like to cook: yes or no?');
       alert('Well, I bet you still enjoy eating out with friends!');
       console.log(answerCook, endUser,'doesn\'t like to cook');
   }
+}
+
+blah();
+
+function travel(){
 
 var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
     if (answerTravel){
@@ -28,8 +38,13 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
         alert('You must do local vacations then.');
         console.log(answerTravel, endUser,'doesn\'t like to travel');
     }
+  }
 
-    var answerGuitar = prompt(endUser+ ' ' +'Do you play a musical instrument? yes or no?');
+travel();
+
+function guitar(){
+
+    var answerGuitar = prompt(endUser+' ' +'Do you play a musical instrument? yes or no?');
         if (answerGuitar){
             answerGuitar = answerGuitar.toLowerCase();
         }
@@ -42,6 +57,11 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
             alert('You must have other hobbies then.');
             console.log(answerGuitar, endUser,'doesn\'t play an instrument');
         }
+      }
+
+  guitar();
+
+  function shows(){
 
       var answerShows = prompt(endUser+ ' ' +'Do you enjoy live shows?');
             if (answerShows){
@@ -56,6 +76,12 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
                 alert('So, Seattle has a pretty robust arts community.  You might find something you like');
                 console.log(answerShows, endUser,'does\'t like live shows');
             }
+        }
+
+      shows();
+
+      function tired(){
+
         var answerTired = prompt(endUser+ ' ' +'Are you getting tired of my questions?');
             if (answerTired){
                 answerTired = answerTired.toLowerCase();
@@ -69,7 +95,13 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
                 alert('Well, only a couple more.');
                 console.log(answerTired, endUser,'isn\'t ready to quit');
             }
+        }
+
+    tired();
+
 //question six I grabbed this from davidbau.com and a couple of other sites - stillneeds work
+function mycount(){
+
   var x = Math.floor(Math.random() * 30) + 1;
   var turns = 5;
   var hint = 'Can you guess my number, 1-30!';
@@ -90,9 +122,15 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
       }
     }
     alert('The secret number was ' + x + '.');
+  }
+
+  mycount();
+
 
 
 //question seven its buggy but sort of works
+ function states(){
+
       var stateCount = 6;
       var statesLived = ['Arizona', 'Nevada', 'California'];
       while (stateCount > 0){
@@ -117,6 +155,11 @@ var answerTravel = prompt(endUser+ ' ' +'Do you like to Travel: yes or no?');
           alert('Sorry, you are out of guesses. My previous homes were Arizona, Nevada, and California.');
           console.log(stateAnswer)
         }
+      }
+
+      states();
+
+
 
 
 
